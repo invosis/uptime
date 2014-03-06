@@ -14,22 +14,23 @@ module.exports = {
 	},
 	email: {
   		transport: { 
-    		auth: {            
-      			user:	process.env.EMAIL_AUTH_USERNAME,
-      			pass:   process.env.EMAIL_AUTH_PASSWORD
-      		}
+    			auth: {            
+      				user:	process.env.EMAIL_AUTH_USERNAME,
+      				pass:   process.env.EMAIL_AUTH_PASSWORD
+      			}
 		},
   		event: {
-    		up:        true,
-    		down:      true,
-    		paused:    true,
-    		restarted: true
-    	},
+    			up:        true,
+    			down:      true,
+    			paused:    true,
+    			restarted: true
+    		},
   		message: {           
-    		from:			'Uptime <' + process.env.EMAIL_FROM_ADDRESS + '>',
-    		to:         	 process.env.EMAIL_TO_ADDRESS,
-  			dashboardUrl: 	'http://' + process.env.HOSTNAME
-  		}
-	},
+    			from:		'Uptime <' + process.env.EMAIL_FROM_ADDRESS + '>',
+    			to:         	 process.env.EMAIL_TO_ADDRESS
+		}
+  		dashboardUrl: 	'http://' + process.env.HOSTNAME
+  	}
+    },
     verbose: false
  }
